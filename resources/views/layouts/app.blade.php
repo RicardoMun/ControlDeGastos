@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light" style="background-color: #F9DF5B;">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="/Images/Bitcoin-Logo.png"
