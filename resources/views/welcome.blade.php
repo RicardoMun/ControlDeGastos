@@ -33,8 +33,10 @@
 <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a href="{{ url('/') }}">
-                    <img src="/Images/Bitcoin-Logo.png" style="width:50px; border-radious:50%;" class="navbar-brand"  />
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    <img src="/Images/Bitcoin-Logo.png"
+                    style="width:50px; border-radious:50%;" />
+                    <b>CoinFolio</b>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -89,6 +91,8 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        @include('layouts.subview-footer')
     </div>
 
 
