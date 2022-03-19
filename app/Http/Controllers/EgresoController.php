@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class EgresoController extends Controller
@@ -11,9 +12,12 @@ class EgresoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $user)
     {
-        //
+        $egresos=$user->egresos()
+        ->orderBy('created_at','desc')
+        ->simplePaginate(10);
+        return view('egresos.index');
     }
 
     /**
@@ -23,7 +27,7 @@ class EgresoController extends Controller
      */
     public function create()
     {
-        //
+        return view('egresos.create');
     }
 
     /**
