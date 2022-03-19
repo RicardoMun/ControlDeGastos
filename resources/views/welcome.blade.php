@@ -55,7 +55,7 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
+                                  <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
                                 </li>
                             @endif
 
@@ -92,6 +92,7 @@
             @yield('content')
         </main>
 
+       
         @include('layouts.subview-footer')
     </div>
 
