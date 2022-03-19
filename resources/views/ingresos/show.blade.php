@@ -4,7 +4,7 @@
 
 <div class="container">
 
-<h1>Publicaciones de {{ $user->name }}</h1>
+<h1>Hola {{ $user->name }} estos son tus ingresos</h1>
 
 @forelse($ingresos as $ingreso)
 
@@ -15,7 +15,7 @@
     </div>
     @empty
         <div class="alert alert-info" role="alert">
-            El usuario no ha publicado mensajes
+            Aún no tienes ingresos visibles
         </div>
     @endforelse
 

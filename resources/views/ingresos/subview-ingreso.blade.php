@@ -3,24 +3,24 @@
 
         <div>
             <h5 class="card-title">{{ $user->name }}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{ $post->created_at->diffForHumans() }}</h6>
-            <p class="card-text">{{ $post->content }}</p>
+            <h6 class="card-subtitle mb-2 text-muted">{{ $ingreso->created_at->diffForHumans() }}</h6>
+            <p class="card-text">{{ $ingreso->valor_ingreso }}</p>
             {{-- <h6 class="card-subtitle mb-2 text-muted">{{ $post->created_at->format('d/m/Y') }}</h6> --}}
         </div>
 
         <div class="text-right">
 
-            <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-info">
+            <a href="{{ route('ingresos.edit', $ingreso->id) }}" class="btn btn-info">
                 <i class="fa-solid fa-pen icons" title="Edit post" ></i>
             </a>
 
-            {!! Form::open(['route' => ['posts.destroy', $post->id], 'method' => 'delete']) !!}
+            {!! Form::open(['route' => ['ingresos.destroy', $ingreso->id], 'method' => 'delete']) !!}
             <br>
             {!! Form::button('<i class="fa-solid fa-trash icons"></i>', [
                 'type' => 'submit',
-                'title' => "Remove post",
+                'title' => "Eliminar ingreso",
                 'class' => 'btn btn-danger',
-                'onclick' => "return confirm('¿Estás seguro de eliminar la publicación?')"
+                'onclick' => "return confirm('¿Estás seguro de eliminar este ingreso?')"
             ])!!}
 
             {!! Form::close() !!}

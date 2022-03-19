@@ -23,9 +23,9 @@ Auth::routes();
 Route::middleware(['auth'])->group(function(){
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::resource('ingresos', App\Http\Controllers\IngresosController::class)->except(['index']);
-    Route::get('/coinu/{user}', [App\Http\Controllers\IngresosController::class, 'index'])->name('ingresos');
+    Route::resource('ingresos', App\Http\Controllers\IngresoController::class)->except(['index']);
+    Route::get('/coinu/{user}', [App\Http\Controllers\IngresoController::class, 'index'])->name('ingresos');
 
-    Route::resource('egresos', App\Http\Controllers\EgresosController::class)->except(['index']);
+    Route::resource('egresos', App\Http\Controllers\EgresoController::class)->except(['index']);
 
 });

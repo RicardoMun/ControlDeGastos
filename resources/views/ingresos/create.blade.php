@@ -5,7 +5,7 @@
 
 <div class="container">
 
-    <h1>Crear ingresos</h1>
+    <h1>Agregar ingreso</h1>
 
     @include('layouts.subview-field-errors')
 
