@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Ingreso;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\IngresoCreateRequest;
 
 class IngresoController extends Controller
 {
@@ -11,9 +15,13 @@ class IngresoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $user)
     {
-        //
+        $ingresos = $user->ingresos()
+                        ->OrderBy('created_at', 'desc')
+                        ->simplePaginate(15);
+
+        return view('ingresos.index', compact('ingresos', 'user'));
     }
 
     /**
@@ -23,7 +31,7 @@ class IngresoController extends Controller
      */
     public function create()
     {
-        //
+        return view('ingresos.create');
     }
 
     /**
@@ -32,9 +40,14 @@ class IngresoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(IngresoCreateRequest $request)
     {
-        //
+        $ingreso = new Ingreso();
+        $ingreso -> fill($request->input());
+        $ingreso -> user_id = Auth::id();
+        $ingreso -> save();
+
+        return redirect(route('home'));
     }
 
     /**

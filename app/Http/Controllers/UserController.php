@@ -4,20 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
-class EgresoController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(User $user)
+    public function index()
     {
-        $egresos=$user->egresos()
-        ->orderBy('created_at','desc')
-        ->simplePaginate(10);
-        return view('egresos.index');
+        return view('welcome');
     }
 
     /**
@@ -27,7 +25,7 @@ class EgresoController extends Controller
      */
     public function create()
     {
-        return view('egresos.create');
+        //
     }
 
     /**
@@ -38,7 +36,10 @@ class EgresoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User();
+        $user -> fill($request->input());
+        $user -> password = Hash::make($request->input('password'));
+        $user -> save();
     }
 
     /**

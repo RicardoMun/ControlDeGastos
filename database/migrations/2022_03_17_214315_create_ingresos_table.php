@@ -15,7 +15,9 @@ class CreateIngresosTable extends Migration
     {
         Schema::create('ingresos', function (Blueprint $table) {
             $table->id();
+            $table->float('valaro_ingreso');
             $table->enum('Categoría', ['Salario', 'Honorarios', 'Donaciones', 'Otros']);
+            //$table->foreingId('user_id')->reference('id')->on('users');
             $table->timestamps();
 
         });
