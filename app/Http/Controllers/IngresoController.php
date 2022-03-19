@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ingreso;
 use Illuminate\Http\Request;
+use App\Http\Requests\IngresoCreateRequest;
+use Illuminate\Support\Facades\Auth;
 
 class IngresoController extends Controller
 {
@@ -23,7 +26,7 @@ class IngresoController extends Controller
      */
     public function create()
     {
-        
+        return view('ingresos.create');
     }
 
     /**
@@ -32,9 +35,14 @@ class IngresoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(IngresoCreateRequest $request)
     {
-        //
+        $ingreso = new Ingreso();
+        $ingreso -> fill($request->input());
+        $ingreso -> user_id = Auth::id();
+        $ingreso -> save();
+
+        return redirect(route('home'));
     }
 
     /**
