@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Ingreso;
 use Illuminate\Http\Request;
-use App\Http\Requests\IngresoCreateRequest;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\IngresoCreateRequest;
 
 class IngresoController extends Controller
 {
@@ -14,9 +15,13 @@ class IngresoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $user)
     {
+        $ingresos = $user->ingresos()
+                        ->OrderBy('created_at', 'desc')
+                        ->simplePaginate(15);
 
+        return view('ingresos.index', compact('ingresos', 'user'));
     }
 
     /**
