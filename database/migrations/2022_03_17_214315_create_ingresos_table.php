@@ -17,7 +17,7 @@ class CreateIngresosTable extends Migration
             $table->id();
             $table->float('valaro_ingreso');
             $table->enum('Categoria', ['Salario', 'Honorarios', 'Donaciones', 'Otros'])->default('Otros');
-            $table->foreingId('user_id')->reference('id')->on('users');
+            $table->foreignId('user_id')->reference('id')->on('users');
             $table->timestamps();
 
         });

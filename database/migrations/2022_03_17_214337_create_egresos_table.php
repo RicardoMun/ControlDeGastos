@@ -18,7 +18,7 @@ class CreateEgresosTable extends Migration
             $table->timestamps();
             $table->enum('categoria',['Transporte','Alimentacion','Vivienda','Servicios','Cine','Fiesta','Otros'])->nullable()->default('Alimentacion');
             $table->float('valor');
-            $table->foreingId('user_id')->reference('id')->on('users');
+            $table->foreignId('user_id')->reference('id')->on('users');
 
         });
     }
