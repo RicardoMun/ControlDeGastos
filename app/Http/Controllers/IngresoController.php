@@ -85,7 +85,7 @@ class IngresoController extends Controller
             $ingreso->fill($request->input());
             $ingreso->save();
             //actualizamos
-            return redirect(route('user.ingresos', $ingreso->user_id)); //route redirecciona por el nombre de la ruta
+            return redirect(route('ingresos', $ingreso->user_id)); //route redirecciona por el nombre de la ruta
 
         }else{
             return back() -> with('status', "Tu no eres el dueño de estos movimientos :)");
@@ -102,10 +102,11 @@ class IngresoController extends Controller
     {
         if($ingreso->user_id == Auth::id()){
             $ingreso->delete();
-            return redirect(route('user.ingresos', $ingreso->user_id));
+            return redirect(route('ingresos', $ingreso->user_id));
         }else{
 
-            return back() -> with('status', "Tu no eres el dueño de estos movimientos :)");
+            @include('layouts.subview-status');
+            return redirect(route('Inicio'));
 
         }
     }

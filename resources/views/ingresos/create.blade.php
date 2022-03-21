@@ -14,7 +14,7 @@
 
             @include('ingresos.subview-campos-ingreso')
 
-            <button type="submit" class="btn btn-primary">Crear ingreso</button>
+            <button type="submit" class="btn btn-outline-secondary" >Crear ingreso</button>
 
         </form>
     {!! Form::close() !!}
