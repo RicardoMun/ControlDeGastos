@@ -59,9 +59,18 @@
                                     {{ Auth::user()->name }}
                                 </a>
 
+
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('home') }}">
                                         {{ __('Perfil') }}
+                                    </a>
+
+                                    <a class="dropdown-item" href="{{ route('ingresos.create') }}">
+                                        {{ __('Crear ingreso') }}
+                                    </a>
+
+                                    <a class="dropdown-item" href="{{ route('egresos.create') }}">
+                                        {{ __('Crear egreso') }}
                                     </a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
