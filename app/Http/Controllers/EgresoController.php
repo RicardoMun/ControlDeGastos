@@ -20,6 +20,7 @@ class EgresoController extends Controller
         $egresos = $user->egresos()
                         ->orderBy('created_at','desc')
                         ->simplePaginate(10);
+                        
         return view('egresos.index', compact('egresos', 'user'));
     }
 
@@ -42,9 +43,9 @@ class EgresoController extends Controller
     public function store(EgresoCreateRequest $request)
     {
         $egreso = new Egreso();
-        $egreso -> fill($request->input());
-        $egreso -> user_id = Auth::id();
-        $egreso -> save();
+        $egreso->fill($request->input());
+        $egreso->user_id = Auth::id();
+        $egreso->save();
 
         return redirect(route('home'));
 

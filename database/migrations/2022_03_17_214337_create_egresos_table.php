@@ -15,10 +15,13 @@ class CreateEgresosTable extends Migration
     {
         Schema::create('egresos', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->enum('categoria', ['Transporte','Alimentacion','Vivienda','Servicios','Cine','Fiesta','Otros'])->nullable()->default('Alimentacion');
             $table->float('valor');
+            $table->enum('categoria', ['Transporte','Alimentacion','Vivienda',
+                                    'Servicios','Cine','Fiesta','Otros'])
+                                    ->nullable()->default('Otros');
+                                    
             $table->foreignId('user_id')->reference('id')->on('users');
+            $table->timestamps();
 
         });
     }

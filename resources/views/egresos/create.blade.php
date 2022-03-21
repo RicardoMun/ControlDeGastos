@@ -12,10 +12,10 @@
 
         <form>
 
-            @include('egresos.subview-campos-egresos')
+            @include('egresos.subview-campos-egreso')
 
             <button type="submit" class="btn btn-primary">Crear egreso</button>
-            
+
         </form>
 
         {!! Form::close() !!}
