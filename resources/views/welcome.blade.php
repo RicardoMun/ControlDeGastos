@@ -49,10 +49,27 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav me-auto">
-
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#">Contactos</a>
                             </li>
+
+                            @guest
+
+                            @else
+                                <li>
+                                    <a class="nav-link active" href="{{ route('ingresos.create') }}">
+                                        {{ __('Crear ingreso') }}
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="nav-link active" href="{{ route('egresos.create') }}">
+                                        {{ __('Crear egreso') }}
+                                    </a>
+                                </li>
+
+                            @endguest
+
 
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -76,6 +93,8 @@
                                     <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
                                     </li>
+
+
                                 @endif
 
                                 @if (Route::has('register'))
@@ -90,6 +109,10 @@
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('home') }}">
+                                            {{ __('Perfil') }}
+                                        </a>
+
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
@@ -158,7 +181,7 @@
             </div>
 
         </div>
-        
+
         @include('layouts.subview-footer')
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>

@@ -35,6 +35,36 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Contactos</a>
+                        </li>
+
+                        @guest
+
+                        @else
+                            <li>
+                                <a class="nav-link active" href="{{ route('ingresos.create') }}">
+                                    {{ __('Crear ingreso') }}
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="nav-link active" href="{{ route('egresos.create') }}">
+                                    {{ __('Crear egreso') }}
+                                </a>
+                            </li>
+                        @endguest
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Servicios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item"> Asesorias</a></li>
+                              <li><a class="dropdown-item"> Personal banker</a></li>
+                              <li><a class="dropdown-item"> Something else here</a></li>
+                            </ul>
+                        </li>
 
                     </ul>
 
@@ -82,7 +112,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
-                                    
+
                                 </div>
                             </li>
                         @endguest
