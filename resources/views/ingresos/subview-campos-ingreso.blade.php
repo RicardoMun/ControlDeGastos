@@ -14,7 +14,7 @@
                 <div class="form-group mb-3">
                     <label for=""></label>
                     <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                        <option selected>Selecciona la categoría del ingreso</option>
+                        <option disabled selected>Selecciona la categoría del ingreso</option>
                         <option value="1">Salario</option>
                         <option value="2">Honorarios</option>
                         <option value="3">Donaciones</option>

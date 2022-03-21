@@ -12,7 +12,7 @@
             <div class="col s2">
                 <label for=""></label>
                 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                    <option selected>Seleccione categoria</option>
+                    <option disabled selected>Seleccione categoria</option>
                     <option value="1">Transporte</option>
                     <option value="2">Alimentacion</option>
                     <option value="3">Vivienda</option>
