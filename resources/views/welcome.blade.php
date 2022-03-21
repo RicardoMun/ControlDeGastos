@@ -68,19 +68,17 @@
                                     </a>
                                 </li>
 
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Opciones
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <li><a class="dropdown-item" href="/in/coinu/{{ Auth::id() }}"> Ver ingresos</a></li>
+                                      <li><a class="dropdown-item" href="/eg/coinu/{{ Auth::id() }}"> Ver egresos</a></li>
+                                      <li><a class="dropdown-item"> Something else here</a></li>
+                                    </ul>
+                                </li>
                             @endguest
-
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                  Servicios
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                  <li><a class="dropdown-item"> Asesorias</a></li>
-                                  <li><a class="dropdown-item"> Personal banker</a></li>
-                                  <li><a class="dropdown-item"> Something else here</a></li>
-                                </ul>
-                            </li>
 
 
                         </ul>
