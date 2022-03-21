@@ -7,7 +7,7 @@
 
     <h1>Agregar ingreso</h1>
 
-    @include('layouts.subview-field-errors')
+    @include('layouts.subview-form-errors')
 
     {!! Form::open(['route' => 'ingresos.store', 'method' => 'post']) !!}
         <form>

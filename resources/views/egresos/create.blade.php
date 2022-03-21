@@ -6,7 +6,7 @@
     <div class="container">
         <h1>Agregar egreso</h1>
 
-        @include('layouts.subview-field-errors')
+        @include('layouts.subview-form-errors')
 
         {!! Form::open(['route' => 'egresos.store', 'method' => 'post']) !!}
 
@@ -14,7 +14,7 @@
 
             @include('egresos.subview-campos-egreso')
 
-            <button type="submit" class="btn btn-primary">Crear egreso</button>
+            <button type="submit" class="btn btn-outline-secondary">Crear egreso</button>
 
         </form>
 
