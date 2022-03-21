@@ -17,9 +17,9 @@ class EgresoController extends Controller
      */
     public function index(User $user)
     {
-        $egresos=$user->egresos()
-        ->orderBy('created_at','desc')
-        ->simplePaginate(10);
+        $egresos = $user->egresos()
+                        ->orderBy('created_at','desc')
+                        ->simplePaginate(10);
         return view('egresos.index', compact('egresos', 'user'));
     }
 

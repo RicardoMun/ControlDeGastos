@@ -5,7 +5,7 @@
 
 <div class="container">
 
-<h1>Hola {{ $user->name }} Estos son tus ingresos</h1>
+<h1>Hola <strong>{{ $user->name }}</strong> estos son tus ingresos</h1>
 
 @forelse($ingresos as $ingreso)
 

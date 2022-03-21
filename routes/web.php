@@ -26,9 +26,8 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('ingresos', App\Http\Controllers\IngresoController::class)->except(['index']);
     Route::get('/in/coinu/{user}', [App\Http\Controllers\IngresoController::class, 'index'])->name('ingresos');
 
-    Route::resource('egresos', App\Http\Controllers\IngresoController::class)->except(['index']);
-    Route::get('/eg/coinu/{user}', [App\Http\Controllers\IngresoController::class, 'index'])->name('egresos');
-
     Route::resource('egresos', App\Http\Controllers\EgresoController::class)->except(['index']);
+    Route::get('/eg/coinu/{user}', [App\Http\Controllers\EgresoController::class, 'index'])->name('egresos');
+
 
 });
