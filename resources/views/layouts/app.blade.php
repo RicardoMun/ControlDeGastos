@@ -72,6 +72,9 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
+                        <a class="nav-link active" href="{{ route('home') }}">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -89,6 +92,7 @@
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
+
 
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
