@@ -23,6 +23,7 @@ Auth::routes();
 Route::middleware(['auth'])->group(function(){
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
     Route::resource('ingresos', App\Http\Controllers\IngresoController::class)->except(['index']);
     Route::get('/in/coinu/{user}', [App\Http\Controllers\IngresoController::class, 'index'])->name('ingresos');
 
