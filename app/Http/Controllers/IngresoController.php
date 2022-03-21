@@ -67,9 +67,9 @@ class IngresoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Ingreso $ingreso)
     {
-        //
+        return view('ingresos.edit', compact('ingreso'));
     }
 
     /**
@@ -79,9 +79,17 @@ class IngresoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(IngresoCreateRequest $request, Ingreso $ingreso)
     {
-        //
+        if ($ingreso->user_id == Auth::id()) {
+            $ingreso->fill($request->input());
+            $ingreso->save();
+            //actualizamos
+            return redirect(route('user.ingresos', $ingreso->user_id)); //route redirecciona por el nombre de la ruta
+
+        }else{
+            return back() -> with('status', "Tu no eres el dueño de estos movimientos :)");
+        }
     }
 
     /**
@@ -90,8 +98,15 @@ class IngresoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Ingreso $ingreso)
     {
-        //
+        if($ingreso->user_id == Auth::id()){
+            $ingreso->delete();
+            return redirect(route('user.ingresos', $ingreso->user_id));
+        }else{
+
+            return back() -> with('status', "Tu no eres el dueño de estos movimientos :)");
+
+        }
     }
 }
