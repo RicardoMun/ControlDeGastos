@@ -30,5 +30,7 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('egresos', App\Http\Controllers\EgresoController::class)->except(['index']);
     Route::get('/eg/coinu/{user}', [App\Http\Controllers\EgresoController::class, 'index'])->name('egresos');
 
+    
+
 
 });
