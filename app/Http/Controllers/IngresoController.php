@@ -43,9 +43,9 @@ class IngresoController extends Controller
     public function store(IngresoCreateRequest $request)
     {
         $ingreso = new Ingreso();
-        $ingreso -> fill($request->input());
-        $ingreso -> user_id = Auth::id();
-        $ingreso -> save();
+        $ingreso->fill($request->input());
+        $ingreso->user_id = Auth::id();
+        $ingreso->save();
 
         return redirect(route('home'));
     }

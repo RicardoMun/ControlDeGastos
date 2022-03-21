@@ -10,9 +10,8 @@ class Egreso extends Model
     use HasFactory;
 
     protected $fillable = [
-        'Categoria',
-        'Valor'
-
+        'Valor',
+        //'Categoria'
     ];
 
     public function user()

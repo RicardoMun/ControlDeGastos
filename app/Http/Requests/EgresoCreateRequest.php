@@ -24,8 +24,8 @@ class EgresoCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'valor' => 'required',
-            'categoria' => 'required'
+            'valor' => 'required'
+            //'categoria' => 'required'
         ];
     }
 }

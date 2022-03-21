@@ -9,9 +9,9 @@ class Ingreso extends Model
 {
     use HasFactory;
 
-    protected $filable = [
+    protected $fillable = [
         'valor_ingreso',
-        'categoria'
+        //'categoria'
     ];
 
     public function user(){
