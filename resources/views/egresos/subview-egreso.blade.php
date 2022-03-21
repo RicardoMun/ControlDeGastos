@@ -10,11 +10,11 @@
 
         <div class="text-right">
 
-            <a href="{{ route('egreso.edit', $egreso->id) }}" class="btn btn-info">
+            <a href="{{ route('egresos.edit', $egreso->id) }}" class="btn btn-info">
                 <i class="fa-solid fa-pen icons" title="Edit post" ></i>
             </a>
 
-            {!! Form::open(['route' => ['egreso.destroy', $egreso->id], 'method' => 'delete']) !!}
+            {!! Form::open(['route' => ['egresos.destroy', $egreso->id], 'method' => 'delete']) !!}
             <br>
             {!! Form::button('<i class="fa-solid fa-trash icons"></i>', [
                 'type' => 'submit',

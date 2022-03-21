@@ -9,7 +9,7 @@
 
 @forelse($egresos as $egreso)
 
-    @include('egresos.subview-egresos')
+    @include('egresos.subview-egreso')
 
     @empty
         <div class="alert alert-info" role="alert">
