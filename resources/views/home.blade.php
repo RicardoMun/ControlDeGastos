@@ -10,9 +10,8 @@
     <table class="table table-dark table-striped table-over">
         <thead>
           <tr>
-            <th scope="col">Nombre</th>
             <th scope="col">Ingresos</th>
-            <th scope="col">Egresos</th>
+            <th scope="col">categoría</th>
             <th scope="col">Total</th>
           </tr>
         </thead>
@@ -21,8 +20,7 @@
                 <tr>
                 <th scope="row">{{ $ingreso->valor_ingreso}}</th>
                 <td>{{ $ingreso->categoria}}</td>
-                <td></td>
-                <td></td>
+                {{-- <td>{{ $ingreso->}}</td> --}}
                 </tr>
             @endforeach
         </tbody>
