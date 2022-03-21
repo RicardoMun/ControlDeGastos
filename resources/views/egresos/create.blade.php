@@ -11,7 +11,7 @@
             <form>
                 <div class="mb-3">
                     <label for="content" class="form-label" >Contenido</label>
-                    {!! Form::textarea('content', '',['class'=>"form-control",'rows'=>1] ) !!}
+                    {!! Form::textarea('content', null,['class'=>"form-control",'rows'=>1] ) !!}
                 </div>
                 <select class="form-select" aria-label="Default select example">
                     <option selected>Seleccione categoria</option>
