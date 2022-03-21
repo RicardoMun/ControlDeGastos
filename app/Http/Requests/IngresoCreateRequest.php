@@ -24,8 +24,8 @@ class IngresoCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'valor_ingreso' => 'required'
-            //'categoria' => 'required'
+            'valor_ingreso' => 'required',
+            'categoria' => 'required'
         ];
     }
 }

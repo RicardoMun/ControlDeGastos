@@ -4,8 +4,9 @@
 
             <div class="col s10">
                 <div class="mb-3">
-                    <label for="content" class="form-label"> ¿Qué valor tendrá el egreso?</label>
-                    {!! Form::textarea('content', null, ['class'=>"form-control",'rows'=>1] ) !!}
+                    <label for="valor" class="form-label"> ¿Qué valor tendrá el egreso?</label>
+                    
+                    {!! Form::textarea('valor', null, ['class'=>"form-control",'rows'=>1] ) !!}
                 </div>
             </div>
 

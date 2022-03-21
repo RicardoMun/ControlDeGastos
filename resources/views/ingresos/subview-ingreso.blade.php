@@ -11,7 +11,7 @@
         <div class="text-right">
 
             <a href="{{ route('ingresos.edit', $ingreso->id) }}" class="btn btn-info">
-                <i class="fa-solid fa-pen icons" title="Edit post" ></i>
+                <i class="fa-solid fa-pen icons" title="Edit ingreso" ></i>
             </a>
 
             {!! Form::open(['route' => ['ingresos.destroy', $ingreso->id], 'method' => 'delete']) !!}

@@ -11,7 +11,7 @@ class Ingreso extends Model
 
     protected $fillable = [
         'valor_ingreso',
-        //'categoria'
+        'categoria'
     ];
 
     public function user(){

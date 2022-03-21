@@ -1,23 +1,34 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+    {{-- <h1>Hola de nuevo {{ $user->name }} </h1>
+    <h6>Aquí pueder ver todos tus movimientos</h6> --}}
 
-                    {{ __('Iniciaste sesión!') }}
-                </div>
-            </div>
-        </div>
-    </div>
+    <table class="table table-dark table-striped table-over">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Ingresos</th>
+            <th scope="col">Egresos</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+            @foreach($ingresos as $ingreso)
+                <tr>
+                <th scope="row">{{ $ingreso->valor_ingreso}}</th>
+                <td>{{ $ingreso->categoria}}</td>
+                <td></td>
+                <td></td>
+                </tr>
+            @endforeach
+        </tbody>
+      </table>
+
 </div>
+
+
 @endsection
