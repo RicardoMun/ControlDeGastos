@@ -68,21 +68,16 @@
 
                 </table>
 
-                {{-- <div class="d-flex justify-content-center">
-                    <h1></h1>
-                </div> --}}
+                <div>
+                    <a type="button" class="btn btn-outline-secondary" href="{{ route('graphics') }}"><i class="fa-solid fa-eye"></i> Ver gráfica</a>
+                    {{-- @include('layouts.graphics') --}}
+                </div>
+
             </div>
 
         </div>
     </div>
-<<<<<<< HEAD
-    <div class="d-flex justify-content-center">
-        <a type="button" class="btn btn-primary" href="{{ route('graphics') }}">Gráfica</a>
-    </div>
-=======
 
-
->>>>>>> daa0ff1a7a68b6e5f038fea2ea052b98a93ebe6e
 </div>
 
 @endsection
