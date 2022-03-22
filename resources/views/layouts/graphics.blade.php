@@ -12,7 +12,6 @@
 
         <h1>Esta es la gráfica de todos tus movimientos</h1>
 
-
         <div class="row">
             <div class="col">
                 <div id="container"></div>
