@@ -20,7 +20,7 @@ class EgresoController extends Controller
         $egresos = $user->egresos()
                         ->orderBy('created_at','desc')
                         ->simplePaginate(10);
-                        
+
         return view('egresos.index', compact('egresos', 'user'));
     }
 
@@ -68,9 +68,9 @@ class EgresoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Egreso $egreso)
     {
-        //
+        return view('egresos.edit', compact('egreso'));
     }
 
     /**
@@ -80,9 +80,17 @@ class EgresoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(EgresoCreateRequest $request, Egreso $egreso)
     {
-        //
+        if ($egreso->user_id == Auth::id()) {
+            $egreso->fill($request->input());
+            $egreso->save();
+            //actualizamos
+            return redirect(route('egresos', $egreso->user_id)); //route redirecciona por el nombre de la ruta
+
+        }else{
+            return back() -> with('status', "Tu no eres el dueño de estos movimientos :)");
+        }
     }
 
     /**
@@ -91,8 +99,16 @@ class EgresoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Egreso $egreso)
     {
-        //
+        if($egreso->user_id == Auth::id()){
+            $egreso->delete();
+            return redirect(route('egresos', $egreso->user_id));
+        }else{
+
+            @include('layouts.subview-status');
+            return redirect(route('Inicio'));
+
+        }
     }
 }
