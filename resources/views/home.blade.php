@@ -56,20 +56,26 @@
 
                     <thead>
                         <tr>
-                          <th scope="col">Saldo total</th>
+                            <th scope="col">Saldo Ingresos</th>
+                            <th scope="col">Saldo Egresos</th>
+                            <th scope="col">Saldo Total</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         <tr>
+                            <td>${{ $ingresos }}</td>
+                            <td>${{ $egresos }}</td>
                             <th scope="row">${{ $total }}</th>
                         </tr>
                     </tbody>
 
                 </table>
 
-                <div>
+                <div class="d-grid gap-2 d-md-block">
                     <a type="button" class="btn btn-outline-secondary" href="{{ route('graphics') }}"><i class="fa-solid fa-eye"></i> Ver gráfica</a>
+                    <a type="button" class="btn btn-outline-secondary" href="/in/coinu/{{ Auth::id() }}"><i class="fa-solid fa-eye"></i> Ver ingresos</a>
+                    <a type="button" class="btn btn-outline-secondary" href="/eg/coinu/{{ Auth::id() }}"><i class="fa-solid fa-eye"></i> Ver egresos</a>
                     {{-- @include('layouts.graphics') --}}
                 </div>
 
