@@ -9,7 +9,7 @@
     <script src="https://code.highcharts.com/modules/accesibility.js"></script>
 <div class="container">
 
-    <h1>Gráfica de Ingresos</h1>
+    <h1>Gráfica de Ingresos y Egresos</h1>
 
 
     <div class="row">

@@ -10,7 +10,7 @@
                 </div>
             </div>
 
-            
+
             <div class="col s2">
                 <div class="form-group mb-3">
                     <label for=""></label>
@@ -19,7 +19,7 @@
                         <option value="Salario">Salario</option>
                         <option value="Honorarios">Honorarios</option>
                         <option value="Donaciones">Donaciones</option>
-                        <option value="Otros">Otros</option>
+                        <option value="Otros">Otros </option>
                       </select>
                 </div>
             </div>
