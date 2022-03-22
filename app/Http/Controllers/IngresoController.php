@@ -88,7 +88,7 @@ class IngresoController extends Controller
             return redirect(route('ingresos', $ingreso->user_id)); //route redirecciona por el nombre de la ruta
 
         }else{
-            return back() -> with('status', "Tu no eres el dueño de estos movimientos :)");
+            return view('layouts.validation');
         }
     }
 
@@ -105,8 +105,7 @@ class IngresoController extends Controller
             return redirect(route('ingresos', $ingreso->user_id));
         }else{
 
-            @include('layouts.subview-status');
-            return redirect(route('Inicio'));
+            return view('layouts.validation');
 
         }
     }
