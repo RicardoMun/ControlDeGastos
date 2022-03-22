@@ -59,8 +59,9 @@
                                   Opciones
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                  <li><a class="dropdown-item" href="/in/coinu/{{ Auth::id() }}"> Ver ingresos</a></li>
-                                  <li><a class="dropdown-item" href="/eg/coinu/{{ Auth::id() }}"> Ver egresos</a></li>
+
+                                  <li><a class="dropdown-item" href="/in/coinu/{{ Auth::id() }}"><i class="fa-solid fa-eye"></i> Ver ingresos</a></li>
+                                  <li><a class="dropdown-item" href="/eg/coinu/{{ Auth::id() }}"><i class="fa-solid fa-eye"></i> Ver egresos</a></li>
                                 </ul>
                             </li>
 
