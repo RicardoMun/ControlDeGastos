@@ -140,24 +140,25 @@
 
         </div>
 
-        <div class="container">
+        <div class="container d-flex justify-content-around">
             <div class="section">
                 <div class="row">
                     <div class="col s6" style="margin-bottom: 70px !important;">
                         <h1> <strong>Sobre nosotros</strong> </h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, inceptos augue magna pulvinar fermentum ut diam, justo auctor commodo quisque parturient non.
-                            Lacus et inceptos lectus ac sociis vitae penatibus vehicula phasellus mus quam gravida curae tellus tortor, congue tempus feugiat facilisi dis commodo
-                            vel montes dictumst enim primis mi aliquam lacinia. Hac torquent curabitur orci tincidunt class ornare fringilla bibendum nam, lobortis mollis pulvinar
-                            proin at nisl congue praesent, facilisis vestibulum ligula erat metus penatibus imperdiet integer.
+                        <p>Hola!! somos <strong>coinFolio</strong> una plataforma web de control de gastos donde podrás manejar de una manera muy facil tus moviminentos de dinero,
+                            para que siempre tengas conocimineto de todos los ingresos o egresos que realizas día a día.
                             <br><br>
-                            Magna pulvinar felis non morbi platea montes sociis lacus pretium, ornare mattis iaculis in cursus faucibus ad fermentum ridiculus, torquent hac integer
-                            erat inceptos eleifend lectus lobortis. Ullamcorper vel sapien nulla auctor convallis neque, eu nisi magna ante eleifend aptent fusce, euismod suspendisse curae cras sodales.
-                            Massa accumsan iaculis mattis vestibulum nascetur platea habitasse ligula habitant, phasellus facilisis fames nec nibh curabitur sodales aliquet, justo facilisi sociosqu turpis
-                            mollis semper mus id.
-                            <br><br>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sequi, soluta ullam, accusantium aut officia molestias reprehenderit
-                            quod a ratione at quasi quas dolores ipsam eius nobis praesentium? Vitae, vel.
+                            Además en <strong>coinFolio</strong> nos preocupamos por nuestros clientes y su vida financiera, por eso, en coinFolio podrás encontrar asesorias personalizadas con uno
+                            de nuestros <strong>Personal Bankers</strong> quienes te darán consejos y te guiarán a obtener una vida financiera más estable.
+                            <br>
+                            Empieza a controlar todos tus gastos desde hoy, registrandote gratis <a class="text-decoration-underline" href="{{ route('register') }}"> AQUÍ</a>
                         </p>
+                        <i class="fa-solid fa-circle-check" style="color: #F9DF5B"></i> Cuenta cifrada
+
+                        <i class="fa-solid fa-circle-check" style="color: #F9DF5B"></i> Atención personalizada
+                        <br><br>
+                        <img src="/Images/Grafica.png">
+
                     </div>
 
                     <div class="col s6">
@@ -165,19 +166,6 @@
                         style="position: relative; width: 420px; height: 550px; ">
                     </div>
 
-                </div>
-
-                <div class="d-flex justify-content-around">
-                    <div class="d-flex" style="margin-left: 30px;">
-                        <p style="color:#F9DF5B; margin-left: -230px;" class="material-icons " >
-                            check_circle <p class="check_circle">Cuenta cifrada</p>
-                        </p>
-                    </div>
-                    <div class="d-flex" style="margin-right: 440px;">
-                        <p style="color:#F9DF5B; margin-left: -380px;" class="material-icons">
-                            check_circle <p class="check_circle">Atención personalizada</p>
-                        </p>
-                    </div>
                 </div>
 
             </div>
