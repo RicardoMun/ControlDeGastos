@@ -27,10 +27,10 @@ class HomeController extends Controller
     public function index()
     {
         $ingresos = Ingreso::where('user_id', Auth::id())
-            ->orderBy('created_at', 'desc') -> simplePaginate(10);
+            ->orderBy('created_at', 'asc') -> simplePaginate(10);
 
         $egresos = Egreso::where('user_id', Auth::id())
-            ->orderBy('created_at', 'desc') -> simplePaginate(10);
+            ->orderBy('created_at', 'asc') -> simplePaginate(10);
 
         return view('home', compact('ingresos', 'egresos'));
     }
