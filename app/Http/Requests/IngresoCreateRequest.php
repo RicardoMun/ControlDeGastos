@@ -25,7 +25,7 @@ class IngresoCreateRequest extends FormRequest
     {
         return [
             'valor_ingreso' => 'required',
-            //'categoria' => 'required'
+            'categoria' => 'required'
         ];
     }
 }

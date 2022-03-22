@@ -19,10 +19,10 @@
         <tbody>
             @foreach($ingresos as $ingreso)
                 <tr>
-                <th scope="row">{{ $ingreso->valor_ingreso}}</th>
-                <td>{{ $ingreso->categoria}}</td>
-                <td>{{ $ingreso->created_at->format('d/m/Y')}}</td>
-                <td>{{ $ingreso->created_at->diffForHumans()}}</td>
+                <th scope="row">{{ $ingreso -> valor_ingreso}}</th>
+                <td>{{ $ingreso -> categoria}}</td>
+                <td>{{ $ingreso -> created_at->format('d/m/Y')}}</td>
+                <td>{{ $ingreso -> created_at->diffForHumans()}}</td>
                 </tr>
             @endforeach
 
@@ -37,10 +37,10 @@
 
             @foreach($egresos as $egreso)
                 <tr>
-                <th scope="row">{{ $egreso->valor}}</th>
-                <td>{{ $egreso->categoria}}</td>
-                <td>{{ $egreso->created_at->format('d/m/Y')}}</td>
-                <td>{{ $egreso->created_at->diffForHumans()}}</td>
+                <th scope="row">{{ $egreso -> valor}}</th>
+                <td>{{ $egreso -> categoria}}</td>
+                <td>{{ $egreso -> created_at->format('d/m/Y')}}</td>
+                <td>{{ $egreso -> created_at->diffForHumans()}}</td>
                 </tr>
             @endforeach
         </tbody>

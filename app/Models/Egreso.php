@@ -11,7 +11,7 @@ class Egreso extends Model
 
     protected $fillable = [
         'valor',
-        //'categoria'
+        'categoria'
     ];
 
     public function user()
