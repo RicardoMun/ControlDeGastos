@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('content')
 
@@ -20,9 +20,9 @@
     @endforelse
 
     <div class="mt-4"></div>
-    {{-- USAMOS PARA PAGINACIÓN --}}
+     USAMOS PARA PAGINACIÓN
     {{ $egresos->links() }}
 </div>
 
 
-@endsection
+@endsection --}}

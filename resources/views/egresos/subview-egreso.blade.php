@@ -3,8 +3,9 @@
 
         <div>
             <h5 class="card-title">{{ $user->name }}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{ $egreso->created_at->diffForHumans() }}</h6>
-            <p class="card-text">{{ $egreso->valor }}</p>
+            <h6 class="card-subtitle mb-2 text-muted">Publicado hace: {{ $egreso->created_at->diffForHumans() }}</h6>
+            <p class="card-text">Valor: ${{ $egreso->valor }}</p>
+            <p class="card-text">Categoría: {{ $egreso->categoria }}</p>
             {{-- <h6 class="card-subtitle mb-2 text-muted">{{ $post->created_at->format('d/m/Y') }}</h6> --}}
         </div>
 

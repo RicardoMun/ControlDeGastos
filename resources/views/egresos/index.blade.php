@@ -5,7 +5,7 @@
 
 <div class="container">
 
-<h1>Hola <strong>{{ $user->name }}</strong> estos son tus egresos</h1>
+    <h1>Estos son todos tus egresos: </h1>
 
 @forelse($egresos as $egreso)
 

@@ -10,8 +10,7 @@
                 </div>
             </div>
 
-
-            {{-- // TODO validación de Enum!! --}}
+            
             <div class="col s2">
                 <div class="form-group mb-3">
                     <label for=""></label>
