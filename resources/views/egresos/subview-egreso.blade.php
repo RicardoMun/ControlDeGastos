@@ -1,4 +1,4 @@
-<div class="card mb-2" >
+<div class="card text-white bg-dark mb-3" >
     <div class="card-body d-flex justify-content-between">
 
         <div>
