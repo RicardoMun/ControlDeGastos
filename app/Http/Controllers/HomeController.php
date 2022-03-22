@@ -32,6 +32,17 @@ class HomeController extends Controller
         $egresos = Egreso::where('user_id', Auth::id())
             ->orderBy('created_at', 'asc') -> simplePaginate(10);
 
-        return view('home', compact('ingresos', 'egresos'));
+        $totalIngresos = 0;
+        $totalEgresos = 0;
+        foreach($ingresos as $ingreso){
+            $totalIngresos += $ingreso -> valor_ingreso;
+        }
+        foreach($egresos as $egreso){
+            $totalEgresos += $egreso -> valor;
+        }
+
+        $total = $totalIngresos - $totalEgresos;
+
+        return view('home', compact('ingresos', 'egresos', 'total'));
     }
 }
