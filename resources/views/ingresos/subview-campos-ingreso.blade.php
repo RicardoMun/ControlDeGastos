@@ -10,16 +10,17 @@
                 </div>
             </div>
 
+
             {{-- // TODO validación de Enum!! --}}
             <div class="col s2">
                 <div class="form-group mb-3">
                     <label for=""></label>
-                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="categoria">
                         <option disabled selected>Selecciona la categoría del ingreso</option>
-                        <option value="1">Salario</option>
-                        <option value="2">Honorarios</option>
-                        <option value="3">Donaciones</option>
-                        <option value="4">Otros</option>
+                        <option value="Salario">Salario</option>
+                        <option value="Honorarios">Honorarios</option>
+                        <option value="Donaciones">Donaciones</option>
+                        <option value="Otros">Otros</option>
                       </select>
                 </div>
             </div>
