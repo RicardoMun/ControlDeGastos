@@ -75,7 +75,6 @@
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                       <li><a class="dropdown-item" href="/in/coinu/{{ Auth::id() }}"> Ver ingresos</a></li>
                                       <li><a class="dropdown-item" href="/eg/coinu/{{ Auth::id() }}"> Ver egresos</a></li>
-                                      <li><a class="dropdown-item"> Something else here</a></li>
                                     </ul>
                                 </li>
                             @endguest
@@ -111,12 +110,14 @@
 
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('home') }}">
+                                            <i class="fa-solid fa-user"></i>
                                             {{ __('Perfil') }}
                                         </a>
 
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
+                                            <i class="fa-solid fa-door-open"></i>
                                             {{ __('Cerrar sesión') }}
                                         </a>
 

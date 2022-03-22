@@ -61,7 +61,6 @@
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                   <li><a class="dropdown-item" href="/in/coinu/{{ Auth::id() }}"> Ver ingresos</a></li>
                                   <li><a class="dropdown-item" href="/eg/coinu/{{ Auth::id() }}"> Ver egresos</a></li>
-                                  <li><a class="dropdown-item"> Something else here</a></li>
                                 </ul>
                             </li>
 
@@ -97,21 +96,25 @@
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('home') }}">
-                                        {{ __('Perfil') }}
+                                        <i class="fa-solid fa-user"></i>
+                                        {{ __(' Perfil') }}
                                     </a>
 
                                     <a class="dropdown-item" href="{{ route('ingresos.create') }}">
-                                        {{ __('Crear ingreso') }}
+                                        <i class="fa-solid fa-plus"></i>
+                                        {{ __(' Crear ingreso') }}
                                     </a>
 
                                     <a class="dropdown-item" href="{{ route('egresos.create') }}">
-                                        {{ __('Crear egreso') }}
+                                        <i class="fa-solid fa-plus"></i>
+                                        {{ __(' Crear egreso') }}
                                     </a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Cerrar sesión') }}
+                                        <i class="fa-solid fa-door-open"></i>
+                                        {{ __(' Cerrar sesión') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
