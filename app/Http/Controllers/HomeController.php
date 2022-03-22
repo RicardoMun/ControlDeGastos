@@ -44,6 +44,35 @@ class HomeController extends Controller
         $total = $totalIngresos - $totalEgresos;
 
         return view('home', compact('ingresos', 'egresos', 'total'));
-        
+
+    }
+
+    public function graphics(){
+
+        $ingresos = Ingreso::where('user_id', Auth::id())
+        ->orderBy('created_at', 'asc') -> simplePaginate(10);
+
+    $egresos = Egreso::where('user_id', Auth::id())
+        ->orderBy('created_at', 'asc') -> simplePaginate(10);
+        $totalIngresos = 0;
+        $totalEgresos = 0;
+        foreach($ingresos as $ingreso){
+            $totalIngresos += $ingreso -> valor_ingreso;
+        }
+        foreach($egresos as $egreso){
+            $totalEgresos += $egreso -> valor;
+        }
+        $total = $totalIngresos - $totalEgresos;
+
+
+        $puntos = [];
+         foreach($ingresos as $ingreso){
+            $puntos[]=['name' => $ingreso['categoria'], 'y'=> floatval($totalIngresos/$total)];
+        }
+        foreach($egresos as $egreso){
+            $puntos[]=['name' => $egreso['categoria'], 'y'=> floatval($totalEgresos/$total)];
+        }
+         return view("layouts.graphics", ["data"=> json_encode($puntos)]);
+
     }
 }

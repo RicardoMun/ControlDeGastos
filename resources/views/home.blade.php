@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+
 @section('content')
 
 <div class="container">
@@ -50,9 +51,9 @@
     <div class="d-flex justify-content-center">
         <h1>Total: {{ $total }}</h1>
     </div>
-
-    
+    <div class="d-flex justify-content-center">
+        <a type="button" class="btn btn-primary" href="{{ route('graphics') }}">Gráfica</a>
+    </div>
 </div>
-
 
 @endsection
