@@ -50,6 +50,8 @@
     <div class="d-flex justify-content-center">
         <h1>Total: {{ $total }}</h1>
     </div>
+
+    
 </div>
 
 

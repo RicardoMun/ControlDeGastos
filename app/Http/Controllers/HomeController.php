@@ -44,5 +44,6 @@ class HomeController extends Controller
         $total = $totalIngresos - $totalEgresos;
 
         return view('home', compact('ingresos', 'egresos', 'total'));
+        
     }
 }
